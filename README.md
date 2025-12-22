@@ -65,6 +65,21 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ---
 
+## 🔗 Path Aliases
+
+This project uses the `@/` alias for absolute imports.
+
+- JavaScript: configured via [jsconfig.json](jsconfig.json).
+- TypeScript: configured via [tsconfig.json](tsconfig.json).
+
+If you encounter TypeScript path errors (e.g., cannot find module `@/...`), reload your editor after changes or validate with:
+
+```bash
+npx tsc -p tsconfig.json --noEmit
+```
+
+---
+
 ## 🤝 Contributing <a name="-contributing"></a>
 
 We welcome contributions! Please see our [CONTRIBUTING.md](./CONTRIBUTING.md) for more details on how to get started.
