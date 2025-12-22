@@ -3,7 +3,7 @@ import { prisma } from "@/lib/prisma";
 
 
 //inngest function to sync user data from clerk to our database
-export const syncUserFunction = inngest.createFunction(
+export const syncUserCreation = inngest.createFunction(
     {id : "sync-user-create" },
     {
         event: "clerk/user.created",
@@ -36,6 +36,19 @@ export const syncUserUpdation = inngest.createFunction(
                 name: `${data.first_name} ${data.last_name}`,
                 image:data.image_url
             }
+        })
+    }
+)
+
+
+export const syncUserDeletion = inngest.createFunction(
+    { id : "sync-user-deletion"},
+    {
+        event:"clerk/user.deleted",
+    },
+    async ({ event }) => {
+        await prisma.user.delete ({
+            where : { id : event.data.id },
         })
     }
 )
