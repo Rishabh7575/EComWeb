@@ -45,5 +45,4 @@ The following components were designed, implemented, or significantly customized
 
 ---
 
-## Project Architecture (High-Level)
 
