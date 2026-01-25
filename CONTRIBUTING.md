@@ -1,7 +1,4 @@
-# Contributing to GoCart
 
-Thank you for considering contributing to **GoCart**!
-We welcome contributions from everyone, whether it's fixing a bug, adding a new feature, or optimizing the codebase.
 
 ---
 
@@ -66,5 +63,3 @@ Here are some areas where you can contribute:
 - **Admin Panel:** Develop features for platform administrators to manage vendors, products, and commissions.
 
 ---
-
-We're excited to see your contributions! 🚀
